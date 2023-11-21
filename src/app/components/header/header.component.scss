@@ -1,0 +1,28 @@
+@import "../../../variables.scss";
+
+header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 10rem;
+
+  img {
+    height: 20rem;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    li {
+      font-size: 1.8rem;
+      color: $color-secondary-text;
+    }
+  }
+}
+
+.active {
+  color: #ffffff;
+}

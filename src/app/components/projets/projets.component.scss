@@ -1,0 +1,92 @@
+@import "../../../variables.scss";
+.container {
+  margin-top: 12rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container-wrapper {
+  width: 85%;
+  height: 60rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.container-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-card {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.7rem;
+}
+.cards {
+  border-radius: 1rem;
+  background-color: $color-gray-Fill-container;
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-graphic {
+  position: absolute;
+  top: 8%;
+  left: 12%;
+  background-image: url("../../../assets/graph/Graphic.svg");
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+}
+
+.img-stellar {
+  position: absolute;
+  background-image: url("../../../assets/graph/stellar.svg");
+  background-size: 8.2rem;
+  width: 10rem;
+  height: 10rem;
+  bottom: 8%;
+  right: 12%;
+}
+span {
+  color: $color-green;
+  font-family: "Kalam";
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  padding: 1.7rem 2.4rem;
+  color: white;
+  border: none;
+  outline: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: $color-purple;
+}

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Kalam:wght@300;400&display=swap";
+@import "./variables.scss";
+
+* {
+  font-family: "Heebo";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $color-black-body;
+  height: 100dvh;
+  width: 100%;
+}
+
+li {
+  font-size: 1.3rem;
+  font-weight: 300;
+  list-style: none;
+}

@@ -7,24 +7,28 @@
 
     <div class="container-card">
       <div class="cards" *ngFor="let card of filteredResult">
-        <!-- {{ card.name + deployUrl }} -->
-        <div class="container-data">
-          <div class="img-project"></div>
-          <div class="container-created">
-            <span></span>
-            <img src="" alt="" />
+        <div class="adjust">
+          <div class="container-data">
+            <div class="img-project">
+              <img
+                src="../../../assets/background-img/{{ card.name }}.png"
+                alt="picture {{ card.name }}"
+                (click)="goToUrl(card.name)"
+              />
+            </div>
+            <div class="container-created">
+              <span>{{ card.created_at | date : "MMMM - yyyy" }}</span>
+              <img
+                src="../../../assets/languages-icons/javascript.svg"
+                alt=""
+              />
+            </div>
+            <h3>{{ card.name }}</h3>
+            <p>{{ card.description }}</p>
           </div>
-          <h3></h3>
-          <p></p>
         </div>
       </div>
     </div>
-    <!-- 
-    <div class="container-button">
-      <button (click)="navigate()">
-        See all <img src="../../../assets/arrows/ArrowRight.svg" />
-      </button>
-    </div> -->
   </div>
   <div class="img-graphic"></div>
   <div class="img-stellar"></div>

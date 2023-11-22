@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { FilteredReposService } from 'src/app/services/filtered-repos.service';
 import { environment } from 'src/environments/environment';
 import { Languages } from 'src/app/types/languages-interface';
+import { DOCUMENT } from '@angular/common';
+import { Inject } from '@angular/core';
 @Component({
   selector: 'app-projets',
   templateUrl: './projets.component.html',
@@ -22,7 +24,8 @@ export class ProjetsComponent implements OnInit {
   constructor(
     private _getApiService: GetApiGithubService,
     private _router: Router,
-    private _filteredRepos: FilteredReposService
+    private _filteredRepos: FilteredReposService,
+    @Inject(DOCUMENT) private _document: Document
   ) {}
 
   ngOnInit() {
@@ -38,5 +41,9 @@ export class ProjetsComponent implements OnInit {
     });
 
     // this.languagesFiltered = this._filteredRepos.languages_url;
+  }
+  goToUrl(url: string) {
+    console.log(url);
+    window.open(`https://${url}${this.deployUrl}`, '_blank');
   }
 }

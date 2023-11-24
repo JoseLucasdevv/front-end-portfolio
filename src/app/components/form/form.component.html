@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="container-contact">
+      <div class="container-img">
+        <img src="../../../assets/Images/Bg.svg" alt="" id="bgForm" />
+
+        <img
+          height="160px"
+          width="160px"
+          src="../../../assets/Images/iconForm.png"
+          alt=""
+          id="iconForm"
+        />
+      </div>
+      <span>Contact</span>
+      <h2>Enjoyed my work? Let's work together</h2>
+      <p>
+        I'm always up for a chat. Pop me an email at
+        <a
+          (click)="
+            goToUrl(
+              'joselucasdev@gmail.com?subject=Inquiry&body=Hello%20there,%0A%0AI'
+            )
+          "
+          >joselucasdev@gmail.com</a
+        >
+        or giveme a shout on social media.
+      </p>
+
+      <div class="container-icons">
+        <img
+          (click)="goToUrl('https://github.com/JoseLucasdevv')"
+          src="../../../assets/social-media-icons/logo-github 1.svg"
+          alt="logo github"
+        />
+        <img
+          (click)="goToUrl('https://www.linkedin.com/in/joselucasdev/')"
+          src="../../../assets/social-media-icons/logo-linkedin 1.svg"
+          alt=""
+        />
+        <img
+          (click)="goToUrl('https://www.instagram.com/joselucasz_/')"
+          src="../../../assets/social-media-icons/logo-instagram 1.svg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="container-form">
+      <form id="sendEmail" action="/">
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="E-mail" />
+        <textarea
+          name="message"
+          id=""
+          cols="20"
+          rows="10"
+          placeholder="Your Message"
+          style="resize: none"
+        ></textarea>
+        <button>
+          Send me a message
+          <img src="../../../assets/arrows/ArrowRight.svg" />
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

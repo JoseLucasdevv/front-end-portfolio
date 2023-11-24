@@ -1,0 +1,120 @@
+@import "../../../variables.scss";
+.container {
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #413a4f;
+    transition: 500ms;
+  }
+  img:hover {
+    padding: 1.1rem;
+    background-color: $color-purple;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  background-color: $color-gray-Fill-container;
+  width: 95%;
+  height: 50rem;
+  border-radius: 1rem;
+  gap: 4rem;
+}
+.container-img {
+  position: relative;
+  width: 320px;
+
+  #iconForm {
+    position: absolute;
+    right: 15.3rem;
+    bottom: 0.8rem;
+  }
+  #bgForm {
+    z-index: 1000000;
+  }
+}
+
+.container-form {
+  margin-top: 4rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 57rem;
+
+    input,
+    textarea {
+      border-radius: 1rem;
+      color: #ffff;
+      width: 100%;
+      outline: 0;
+      padding: 1.7rem;
+      border: none;
+      background-color: black;
+    }
+    input:focus,
+    textarea:focus {
+      border: 2px solid $color-green;
+    }
+    textarea {
+      height: 17rem;
+    }
+    *::placeholder {
+      color: $color-secondary-text;
+      font-size: 1.5rem;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      border-radius: 1rem;
+      padding: 1.7rem 2.4rem;
+      color: white;
+      border: none;
+      outline: 0;
+      font-size: 1.5rem;
+      font-weight: 500;
+      background-color: $color-purple;
+      width: 22rem;
+    }
+  }
+}
+span {
+  color: $color-green;
+  font-family: "Kalam";
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 500;
+}
+p {
+  color: $color-secondary-text;
+  font-size: 1.6rem;
+}
+a {
+  color: $color-green;
+}

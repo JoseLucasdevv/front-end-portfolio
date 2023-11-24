@@ -10,6 +10,8 @@ import { ProjetsComponent } from './components/projets/projets.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './components/main/main.component';
+import { FormComponent } from './components/form/form.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { MainComponent } from './components/main/main.component';
     AboutComponent,
     ProjetsComponent,
     MainComponent,
+    FormComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule],
   providers: [],

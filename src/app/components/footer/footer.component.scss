@@ -1,0 +1,54 @@
+@import "../../../variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.arrowUp-button:hover {
+  padding: 0.7rem;
+}
+footer {
+  padding: 3rem 10rem;
+  width: 100%;
+  background-color: $color-gray-Fill-container;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+span {
+  font-size: 1.4rem;
+  color: $color-secondary-text;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+  li {
+    a {
+      font-size: 1.6rem;
+      color: $color-secondary-text;
+      transition: 500ms;
+    }
+
+    a:hover {
+      font-size: 1.8rem;
+      color: $color-green;
+    }
+  }
+}
+
+button {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-purple;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  border-radius: 0.5rem;
+  transition: 500ms;
+}

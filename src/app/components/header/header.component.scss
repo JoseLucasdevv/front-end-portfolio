@@ -1,12 +1,15 @@
 @import "../../../variables.scss";
 
 header {
+  z-index: 999999999999999999999;
+  position: fixed;
   width: 100%;
   height: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0rem 10rem;
+  // background-color: $color-gray-Fill-container;
 
   img {
     height: 20rem;
@@ -17,12 +20,17 @@ header {
     gap: 4rem;
 
     li {
+      cursor: pointer;
       font-size: 1.8rem;
       color: $color-secondary-text;
+      a {
+        transition: 500ms;
+      }
     }
   }
 }
 
-.active {
-  color: #ffffff;
+a:hover {
+  font-size: 2.2rem;
+  color: $color-green;
 }

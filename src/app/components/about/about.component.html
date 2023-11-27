@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="about">
   <div class="wrapper">
     <div class="img-container">
       <img src="../../../assets/Images/bro.png" alt="" />
@@ -28,7 +28,13 @@
         to pursue new challenges.
       </p>
       <div class="button-container">
-        <button>
+        <button
+          (click)="
+            goToUrl(
+              'https://www.dropbox.com/scl/fi/cj2dnezs1zj5pfwyeugwb/Curr-culo-Jos-Lucas.pdf?rlkey=eqysy7dm4v4xjq3plm89fkjq3&dl=0'
+            )
+          "
+        >
           <img src="../../../assets/arrows/ReadCvLogo.svg" alt="" /> My resume
         </button>
       </div>

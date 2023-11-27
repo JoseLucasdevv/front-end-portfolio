@@ -1,14 +1,21 @@
-<div class="container">
+<div class="container" id="home">
   <div class="text-container">
     <h1>Hi,I'm José Lucas</h1>
     <h3>Full-stack developer and Innovation enthusiast</h3>
     <p>
       Over 4 years of experience in the tech industry. I specialize in building
       innovative web and mobile applications using technologies such as React,
-      React Native, and Node.js
+      Angular and Node.js
     </p>
     <div class="buttons">
-      <button class="btn-primary">
+      <button
+        class="btn-primary"
+        (click)="
+          goToUrl(
+            'https://www.dropbox.com/scl/fi/cj2dnezs1zj5pfwyeugwb/Curr-culo-Jos-Lucas.pdf?rlkey=eqysy7dm4v4xjq3plm89fkjq3&dl=0'
+          )
+        "
+      >
         <img src="../../../assets/arrows/ReadCvLogo.svg" /> My resume
       </button>
       <button class="btn-secondary">

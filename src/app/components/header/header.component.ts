@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  scroll(): void {}
+  constructor(private _router: Router) {}
+  scroll(el: string): void {
+    if (document.getElementById(el)) {
+      document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this._router
+        .navigate(['/home'])
+        .then(() =>
+          document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' })
+        );
+    }
+  }
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="contact">
   <div class="wrapper">
     <div class="container-contact">
       <div class="container-img">
@@ -16,12 +16,7 @@
       <h2>Enjoyed my work? Let's work together</h2>
       <p>
         I'm always up for a chat. Pop me an email at
-        <a
-          (click)="
-            goToUrl(
-              'joselucasdev@gmail.com?subject=Inquiry&body=Hello%20there,%0A%0AI'
-            )
-          "
+        <a href="mailto:joselucas.dev@gmail.com" target="_blank"
           >joselucasdev@gmail.com</a
         >
         or giveme a shout on social media.
@@ -47,17 +42,20 @@
     </div>
 
     <div class="container-form">
-      <form id="sendEmail" action="/">
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="E-mail" />
+      <form id="sendEmail" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Name" formControlName="formName" />
+
+        <input type="text" placeholder="E-mail" formControlName="formEmail" />
+
         <textarea
           name="message"
-          id=""
           cols="20"
           rows="10"
           placeholder="Your Message"
           style="resize: none"
+          formControlName="formMessage"
         ></textarea>
+
         <button>
           Send me a message
           <img src="../../../assets/arrows/ArrowRight.svg" />

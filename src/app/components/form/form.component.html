@@ -17,7 +17,7 @@
       <p>
         I'm always up for a chat. Pop me an email at
         <a href="mailto:joselucas.dev@gmail.com" target="_blank"
-          >joselucasdev@gmail.com</a
+          >joselucasdev&#64;gmail.com</a
         >
         or giveme a shout on social media.
       </p>
@@ -44,9 +44,34 @@
     <div class="container-form">
       <form id="sendEmail" [formGroup]="form" (ngSubmit)="onSubmit()">
         <input type="text" placeholder="Name" formControlName="formName" />
-
+        <p
+          class="danger"
+          *ngIf="
+            form.get('formName')?.hasError('required') &&
+            (form.get('formName')?.dirty || form.get('formName')?.touched)
+          "
+        >
+          {{ errorsMsg.msgRequired }}
+        </p>
         <input type="text" placeholder="E-mail" formControlName="formEmail" />
-
+        <p
+          class="danger"
+          *ngIf="
+            form.get('formEmail')?.hasError('required') &&
+            (form.get('formEmail')?.dirty || form.get('formEmail')?.touched)
+          "
+        >
+          {{ errorsMsg.msgRequired }}
+        </p>
+        <p
+          class="danger"
+          *ngIf="
+            form.get('formEmail')?.hasError('email') &&
+            (form.get('formEmail')?.dirty || form.get('formEmail')?.touched)
+          "
+        >
+          {{ errorsMsg.msgEmail }}
+        </p>
         <textarea
           name="message"
           cols="20"
@@ -55,6 +80,33 @@
           style="resize: none"
           formControlName="formMessage"
         ></textarea>
+        <p
+          class="danger"
+          *ngIf="
+            form.get('formMessage')?.hasError('required') &&
+            (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
+          "
+        >
+          {{ errorsMsg.msgRequired }}
+        </p>
+        <p
+          class="danger"
+          *ngIf="
+            form.get('formMessage')?.hasError('minlength') &&
+            (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
+          "
+        >
+          {{ errorsMsg.msgMinLength }}
+        </p>
+        <p
+          class="danger"
+          *ngIf="
+            form.get('formMessage')?.hasError('maxlength') &&
+            (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
+          "
+        >
+          {{ errorsMsg.msgMaxLength }}
+        </p>
 
         <button>
           Send me a message

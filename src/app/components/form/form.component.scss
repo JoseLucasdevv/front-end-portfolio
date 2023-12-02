@@ -60,7 +60,7 @@
   form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.6rem;
     width: 57rem;
 
     input,
@@ -118,4 +118,13 @@ p {
 }
 a {
   color: $color-green;
+}
+
+.danger {
+  margin-left: 0.7rem;
+  font-size: 1.6rem;
+  display: flex;
+
+  width: fit-content;
+  color: #ed4337;
 }

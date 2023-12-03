@@ -1,13 +1,16 @@
 <header>
   <img src="../../../assets/Images/Logo.png" alt="Logo José Lucas" />
+
   <ul>
-    <li><a routerLinkActive="active" (click)="scroll('home')">Home</a></li>
-    <li><a routerLinkActive="active" (click)="scroll('about')">About</a></li>
+    <li><a (click)="scroll('home')">Home</a></li>
+    <li><a (click)="scroll('about')">About</a></li>
     <li>
-      <a routerLinkActive="active" (click)="scroll('projets')">Projets</a>
+      <a (click)="scroll('projets')">Projets</a>
     </li>
     <li>
-      <a routerLinkActive="active" (click)="scroll('contact')">Contact</a>
+      <a (click)="scroll('contact')">Contact</a>
     </li>
   </ul>
+
+  <div class="img-hamburguer"></div>
 </header>

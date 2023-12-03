@@ -34,3 +34,17 @@ a:hover {
   font-size: 2.2rem;
   color: $color-green;
 }
+
+.img-hamburguer {
+  display: none;
+  height: 4.2rem;
+  width: 4.2rem;
+  background-size: cover;
+  background-image: url("../../../assets/social-media-icons/iconHamburguer.svg");
+}
+
+@media (min-width: 968px) {
+  ul {
+    display: none;
+  }
+}

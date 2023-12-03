@@ -18,7 +18,12 @@
       >
         <img src="../../../assets/arrows/ReadCvLogo.svg" /> My resume
       </button>
-      <button class="btn-secondary">
+      <button
+        class="btn-secondary"
+        (click)="
+          goToUrl('https://api.whatsapp.com/send?l=pt&amp;phone=55086999512819')
+        "
+      >
         Get in touch <img src="../../../assets/arrows/ArrowRight.svg" alt="" />
       </button>
     </div>

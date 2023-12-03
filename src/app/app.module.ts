@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './components/main/main.component';
 import { FormComponent } from './components/form/form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ScrollYDirective } from './directives/scroll-y.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MainComponent,
     FormComponent,
     FooterComponent,
+    ScrollYDirective,
   ],
   imports: [
     BrowserModule,

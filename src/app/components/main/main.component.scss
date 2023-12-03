@@ -3,5 +3,32 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  // gap: 5rem;
+  gap: 4rem;
+}
+
+.whatsapp-icon {
+  cursor: pointer;
+  position: fixed;
+  background-image: url("../../../assets/social-media-icons/whatsapp-icon-logo-svgrepo-com.svg");
+  background-size: contain;
+  width: 4rem;
+  height: 4rem;
+  bottom: 5%;
+  right: 2%;
+
+  animation: slidein 0.8s infinite alternate;
+}
+
+.remove {
+  display: none;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-15%) scale(1);
+  }
+
+  to {
+    transform: translateY(0%) scale(1.1);
+  }
 }

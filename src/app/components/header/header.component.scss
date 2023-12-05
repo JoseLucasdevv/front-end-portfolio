@@ -48,6 +48,16 @@ a:hover {
   z-index: 2;
   position: fixed;
   right: 0;
+  animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
 }
 
 @media (max-width: 1320px) {

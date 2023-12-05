@@ -1,22 +1,20 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { BehaviorSubject } from 'rxjs';
+import { Navigate } from '../../navigate';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private _router: Router) {}
-  scroll(el: string): void {
-    if (document.getElementById(el)) {
-      document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      this._router
-        .navigate(['/home'])
-        .then(() =>
-          document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' })
-        );
-    }
+  showNav: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+  constructor(private _navigate: Navigate) {}
+
+  scroll(el: string) {
+    this._navigate.scroll(el);
+  }
+  clickOpen() {
+    this.showNav.next(true);
   }
 }

@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 header {
-  z-index: 999999999999999999999;
+  z-index: 1;
   position: fixed;
   width: 100%;
   height: 8rem;
@@ -41,10 +41,22 @@ a:hover {
   width: 4.2rem;
   background-size: cover;
   background-image: url("../../../assets/social-media-icons/iconHamburguer.svg");
+  cursor: pointer;
 }
 
-@media (min-width: 968px) {
-  ul {
-    display: none;
+.nav-position {
+  z-index: 2;
+  position: fixed;
+  right: 0;
+}
+
+@media (max-width: 1320px) {
+  header {
+    ul {
+      display: none;
+    }
+    .img-hamburguer {
+      display: block;
+    }
   }
 }

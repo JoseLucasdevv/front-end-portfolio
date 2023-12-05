@@ -1,9 +1,4 @@
-import {
-  Directive,
-  HostListener,
-  ElementRef,
-  HostBinding,
-} from '@angular/core';
+import { Directive, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appScrollY]',

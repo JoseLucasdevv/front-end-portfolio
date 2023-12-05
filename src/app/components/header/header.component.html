@@ -1,3 +1,9 @@
+<app-nav-aside
+  *ngIf="showNav | async"
+  class="nav-position"
+  [flag]="showNav"
+></app-nav-aside>
+
 <header>
   <img src="../../../assets/Images/Logo.png" alt="Logo José Lucas" />
 
@@ -12,5 +18,5 @@
     </li>
   </ul>
 
-  <div class="img-hamburguer"></div>
+  <div (click)="clickOpen()" class="img-hamburguer"></div>
 </header>

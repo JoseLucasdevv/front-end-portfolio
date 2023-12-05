@@ -14,6 +14,7 @@ import { MainComponent } from './components/main/main.component';
 import { FormComponent } from './components/form/form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ScrollYDirective } from './directives/scroll-y.directive';
+import { NavAsideComponent } from './components/nav-aside/nav-aside.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ScrollYDirective } from './directives/scroll-y.directive';
     FormComponent,
     FooterComponent,
     ScrollYDirective,
+    NavAsideComponent,
   ],
   imports: [
     BrowserModule,

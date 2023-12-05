@@ -1,0 +1,60 @@
+@import "../../../variables.scss";
+
+.container-aside {
+  background-color: $color-gray-Fill-container;
+  width: 25rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black-body;
+  gap: 2rem;
+
+  .picture-insta {
+    img {
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    color: $color-secondary-text;
+    text-align: center;
+  }
+}
+
+ul {
+  margin-top: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+
+  li {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: $color-secondary-text;
+    a {
+      transition: 500ms;
+    }
+  }
+}
+
+a:hover {
+  font-size: 2.2rem;
+  color: $color-green;
+}
+
+.none {
+  display: none;
+}

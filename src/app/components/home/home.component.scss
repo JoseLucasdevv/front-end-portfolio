@@ -74,7 +74,7 @@
 }
 .arrow {
   position: absolute;
-  right: 27%;
+  right: 30%;
   top: calc(48rem + 8rem + 8rem);
   width: 10rem;
   height: 10rem;
@@ -94,6 +94,9 @@
   }
   .arrow {
     top: calc(48rem + 8rem + 58rem);
+  }
+  .keyboard-picture {
+    height: 45rem;
   }
 
   .container-keyboard {

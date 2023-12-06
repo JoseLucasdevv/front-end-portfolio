@@ -60,8 +60,9 @@ a:hover {
   }
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1120px) {
   header {
+    padding: 2rem 3rem;
     ul {
       display: none;
     }

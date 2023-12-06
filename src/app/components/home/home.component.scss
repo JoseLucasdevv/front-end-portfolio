@@ -1,12 +1,12 @@
 @import "../../../variables.scss";
 
 .container {
-  margin-top: 16rem;
+  margin-top: 12rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15rem;
+  padding: 0 10rem;
   gap: 10rem;
 }
 .keyboard-picture {
@@ -14,7 +14,7 @@
 }
 
 .text-container {
-  width: 50%;
+  width: 100%;
 
   h1 {
     width: fit-content;
@@ -74,10 +74,45 @@
 }
 .arrow {
   position: absolute;
-  right: 30%;
+  right: 27%;
   top: calc(48rem + 8rem + 8rem);
   width: 10rem;
   height: 10rem;
   background-image: url("../../../assets/arrows/ArrowDown.svg");
   background-size: contain;
+}
+.container-keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+@media (max-width: 1190px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .arrow {
+    top: calc(48rem + 8rem + 58rem);
+  }
+
+  .container-keyboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .keyboard-picture {
+    height: 35rem;
+  }
 }

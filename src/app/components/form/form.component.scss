@@ -57,11 +57,12 @@
 
 .container-form {
   margin-top: 4rem;
+  width: 45%;
   form {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    width: 57rem;
+    width: 100%;
 
     input,
     textarea {
@@ -127,4 +128,25 @@ a {
 
   width: fit-content;
   color: #ed4337;
+}
+
+@media (max-width: 1347px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .container-contact {
+    margin-top: 3rem;
+  }
+  .container-form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    padding: 0 2rem;
+  }
+  .container-form {
+    width: 95%;
+  }
 }

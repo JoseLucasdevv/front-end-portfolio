@@ -63,3 +63,26 @@ button {
   font-weight: 500;
   background-color: $color-purple;
 }
+
+@media (max-width: 1100px) {
+  .wrapper {
+    align-items: start;
+    flex-direction: column;
+  }
+  .img-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-container {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .img-container {
+    img {
+      height: 30rem;
+    }
+  }
+}

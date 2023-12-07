@@ -9,14 +9,17 @@
 .arrowUp-button:hover {
   padding: 0.7rem;
 }
+
 footer {
-  padding: 3rem 10rem;
-  width: 100%;
+  padding: 3rem 4rem;
+  width: 100vw;
   background-color: $color-gray-Fill-container;
   margin-top: 12rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 span {
   font-size: 1.4rem;
@@ -51,4 +54,10 @@ button {
   border: none;
   border-radius: 0.5rem;
   transition: 500ms;
+}
+
+@media (max-width: 720px) {
+  footer {
+    justify-content: center;
+  }
 }

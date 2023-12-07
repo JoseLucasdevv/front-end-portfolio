@@ -57,7 +57,7 @@
 
 .container-form {
   margin-top: 4rem;
-  width: 45%;
+  width: 35%;
   form {
     display: flex;
     flex-direction: column;
@@ -130,7 +130,7 @@ a {
   color: #ed4337;
 }
 
-@media (max-width: 1347px) {
+@media (max-width: 1300px) {
   .wrapper {
     flex-direction: column;
   }

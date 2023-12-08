@@ -6,9 +6,17 @@ import { Directive, HostListener, HostBinding } from '@angular/core';
 export class ScrollYDirective {
   constructor() {}
   @HostBinding('class.remove') toggle: boolean = false;
+
   @HostListener('window:scroll')
   onScroll() {
-    if (window.scrollY > 1800) {
+    const footer = document.getElementById('bottom-footer');
+    if (!footer) return;
+
+    const footerY = footer.offsetTop;
+    // Analise
+    console.log(footerY, window.scrollY);
+    const scrollBottomY = window.scrollY + window.innerHeight;
+    if (scrollBottomY > footerY) {
       this.toggle = true;
     } else {
       this.toggle = false;

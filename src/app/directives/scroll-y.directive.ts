@@ -13,8 +13,7 @@ export class ScrollYDirective {
     if (!footer) return;
 
     const footerY = footer.offsetTop;
-    // Analise
-    console.log(footerY, window.scrollY);
+
     const scrollBottomY = window.scrollY + window.innerHeight;
     if (scrollBottomY > footerY) {
       this.toggle = true;

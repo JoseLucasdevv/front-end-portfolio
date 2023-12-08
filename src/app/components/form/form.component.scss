@@ -129,6 +129,9 @@ a {
   width: fit-content;
   color: #ed4337;
 }
+.remove {
+  display: none;
+}
 
 @media (max-width: 1300px) {
   .wrapper {

@@ -63,7 +63,7 @@
       gap: 0.5rem;
       cursor: pointer;
       border-radius: 1rem;
-      padding: 1.2rem 2.4rem;
+      padding: 1.2rem 1.5rem;
       color: white;
       border: none;
       outline: 0;
@@ -114,12 +114,15 @@
     padding: 0 3rem;
   }
 }
+
 @media (max-width: 600px) {
   .keyboard-picture {
     height: 30rem;
   }
 
-  button {
-    padding: 1.2rem 1.2rem;
+  .buttons {
+    button {
+      padding: 1rem 1rem;
+    }
   }
 }

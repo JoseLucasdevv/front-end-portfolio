@@ -41,7 +41,10 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(): void | boolean {
-    if (this.form.status === 'INVALID') return false;
+    if (this.form.status === 'INVALID') {
+      alert('preencha o formulário');
+      return false;
+    }
 
     this._formService.send(this.form.value);
 

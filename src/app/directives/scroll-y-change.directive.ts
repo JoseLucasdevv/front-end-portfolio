@@ -12,7 +12,6 @@ export class ScrollChangeY {
     if (!footer) return;
 
     const footerY = footer.offsetTop;
-    // Analise
 
     const scrollBottomY = window.scrollY + window.innerHeight;
     if (scrollBottomY > footerY) {

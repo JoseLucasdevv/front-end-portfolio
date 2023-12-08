@@ -55,6 +55,9 @@ button {
   border-radius: 0.5rem;
   transition: 500ms;
 }
+.remove {
+  display: none;
+}
 
 @media (max-width: 720px) {
   footer {

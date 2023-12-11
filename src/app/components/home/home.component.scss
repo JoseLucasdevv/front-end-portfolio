@@ -115,6 +115,12 @@
   }
 }
 
+@media (max-width: 1190px) {
+  .arrow {
+    top: calc(48rem + 8rem + 38rem);
+  }
+}
+
 @media (max-width: 600px) {
   .keyboard-picture {
     height: 30rem;
@@ -124,5 +130,18 @@
     button {
       padding: 1rem 1rem;
     }
+  }
+  .arrow {
+    top: calc(48rem + 8rem + 28rem);
+  }
+}
+@media (max-width: 563px) {
+  .arrow {
+    top: calc(48rem + 8rem + 34rem);
+  }
+}
+@media (max-width: 430px) {
+  .arrow {
+    top: calc(48rem + 8rem + 43rem);
   }
 }

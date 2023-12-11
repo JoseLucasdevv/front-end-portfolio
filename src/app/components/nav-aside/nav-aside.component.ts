@@ -8,11 +8,26 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class NavAsideComponent implements OnInit, OnDestroy {
   @Input() flag!: BehaviorSubject<boolean>;
+  aside!: HTMLElement | null;
   html: HTMLElement = document.getElementsByTagName('html')[0];
   constructor(private _navigate: Navigate) {}
 
   ngOnInit(): void {
     this.html.style.overflowY = 'hidden';
+
+    this.aside = document.getElementById('nav');
+
+    const asideWidth = this.aside?.offsetWidth;
+    if (!asideWidth) return;
+    const innerWidth = window.innerWidth;
+    const onClick = (e: MouseEvent) => {
+      if (e.clientX < innerWidth - asideWidth) {
+        this.flag.next(false);
+        document.removeEventListener('click', onClick);
+      }
+    };
+
+    document.addEventListener('click', onClick);
   }
   ngOnDestroy(): void {
     this.html.style.overflowY = 'visible';

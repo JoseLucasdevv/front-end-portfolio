@@ -14,7 +14,7 @@ export class FormComponent implements OnInit {
   errorsMsg: Errors = {
     msgEmail: 'Enter a Valid Email',
     msgMinLength: 'The minimum number of characters is 6',
-    msgMaxLength: 'Maximum characters is 400',
+    msgMaxLength: 'Maximum characters is 200',
     msgRequired: 'Input cannot be empty',
   };
 
@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
         [
           Validators.required,
           Validators.minLength(6),
-          Validators.maxLength(400),
+          Validators.maxLength(200),
         ],
       ],
     });

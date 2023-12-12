@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .container {
-  margin-top: 12rem;
+  margin-top: 16rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@
 .arrow {
   position: absolute;
   right: 30%;
-  top: calc(48rem + 8rem + 8rem);
+  top: calc(48rem + 8rem + 12rem);
   width: 10rem;
   height: 10rem;
   background-image: url("../../../assets/arrows/ArrowDown.svg");
@@ -117,7 +117,7 @@
 
 @media (max-width: 1190px) {
   .arrow {
-    top: calc(48rem + 8rem + 38rem);
+    top: calc(48rem + 8rem + 42rem);
   }
 }
 
@@ -132,16 +132,16 @@
     }
   }
   .arrow {
-    top: calc(48rem + 8rem + 28rem);
+    top: calc(48rem + 8rem + 32rem);
   }
 }
 @media (max-width: 563px) {
   .arrow {
-    top: calc(48rem + 8rem + 34rem);
+    top: calc(48rem + 8rem + 38rem);
   }
 }
 @media (max-width: 428px) {
   .arrow {
-    top: calc(48rem + 8rem + 43rem);
+    top: calc(48rem + 8rem + 47rem);
   }
 }

@@ -43,6 +43,22 @@ a:hover {
   background-image: url("../../../assets/social-media-icons/iconHamburguer.svg");
   cursor: pointer;
 }
+.btn-translate {
+  font-size: 1.5rem;
+  justify-content: center;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  color: $color-secondary-text;
+  padding: 0.2rem;
+  transition: 500ms;
+  text-align: center;
+}
+.btn-translate:hover {
+  padding: 1rem;
+  color: $color-green;
+}
 
 .nav-position {
   z-index: 2;

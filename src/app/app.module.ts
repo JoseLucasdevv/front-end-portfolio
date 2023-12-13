@@ -8,7 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjetsComponent } from './components/projets/projets.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './components/main/main.component';
 import { FormComponent } from './components/form/form.component';
@@ -16,6 +16,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ScrollYDirective } from './directives/scroll-y.directive';
 import { NavAsideComponent } from './components/nav-aside/nav-aside.component';
 import { ScrollChangeY } from './directives/scroll-y-change.directive';
+
+// import ngx-translate and the http loader
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -38,8 +42,20 @@ import { ScrollChangeY } from './directives/scroll-y-change.directive';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

@@ -72,15 +72,7 @@
     }
   }
 }
-.arrow {
-  position: absolute;
-  right: 30%;
-  top: calc(48rem + 8rem + 12rem);
-  width: 10rem;
-  height: 10rem;
-  background-image: url("../../../assets/arrows/ArrowDown.svg");
-  background-size: contain;
-}
+
 .container-keyboard {
   display: flex;
   align-items: center;
@@ -115,33 +107,16 @@
   }
 }
 
-@media (max-width: 1190px) {
-  .arrow {
-    top: calc(48rem + 8rem + 42rem);
-  }
-}
-
 @media (max-width: 600px) {
   .keyboard-picture {
     height: 30rem;
   }
-
-  .buttons {
-    button {
-      padding: 1rem 1rem;
+  .text-container {
+    .buttons {
+      button {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+      }
     }
-  }
-  .arrow {
-    top: calc(48rem + 8rem + 32rem);
-  }
-}
-@media (max-width: 563px) {
-  .arrow {
-    top: calc(48rem + 8rem + 38rem);
-  }
-}
-@media (max-width: 428px) {
-  .arrow {
-    top: calc(48rem + 8rem + 47rem);
   }
 }

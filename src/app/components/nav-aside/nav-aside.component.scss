@@ -74,3 +74,11 @@ a:hover {
 .remove {
   display: none;
 }
+@media (max-height: 700px) {
+  .section-header {
+    height: 25rem;
+  }
+  ul {
+    gap: 3.5rem;
+  }
+}

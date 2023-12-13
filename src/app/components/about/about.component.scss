@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .container {
-  margin-top: 12rem;
+  // margin-top: 5rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -62,6 +62,20 @@ button {
   font-size: 1.5rem;
   font-weight: 500;
   background-color: $color-purple;
+}
+.container-arrow {
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.arrow {
+  width: 10rem;
+  height: 10rem;
+  background-image: url("../../../assets/arrows/ArrowDown.svg");
+  background-size: contain;
 }
 
 @media (max-width: 1100px) {

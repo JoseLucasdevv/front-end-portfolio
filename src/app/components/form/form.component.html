@@ -16,14 +16,14 @@
           id="iconForm"
         />
       </div>
-      <span>Contact</span>
-      <h2>Enjoyed my work? Let's work together</h2>
+      <span>{{ "contact-title" | translate }}</span>
+      <h2>{{ "contact-h2" | translate }}</h2>
       <p>
-        I'm always up for a chat. Pop me an email at
+        {{ "contact-text-first" | translate }}
         <a href="mailto:joselucas.dev@gmail.com" target="_blank"
           >joselucasdev&#64;gmail.com</a
         >
-        or giveme a shout on social media.
+        {{ "contact-text-last" | translate }}
       </p>
 
       <div class="container-icons">
@@ -57,7 +57,11 @@
 
     <div class="container-form">
       <form id="sendEmail" [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Name" formControlName="formName" />
+        <input
+          type="text"
+          placeholder="{{ 'contact-placeholder-name' | translate }}"
+          formControlName="formName"
+        />
         <p
           class="danger"
           *ngIf="
@@ -65,9 +69,16 @@
             (form.get('formName')?.dirty || form.get('formName')?.touched)
           "
         >
-          {{ errorsMsg.msgRequired }}
+          {{
+            "contact-msg-required-empty"
+              | translate : { value: errorsMsg.msgRequired }
+          }}
         </p>
-        <input type="text" placeholder="E-mail" formControlName="formEmail" />
+        <input
+          type="text"
+          placeholder="{{ 'contact-placeholder-email' | translate }}"
+          formControlName="formEmail"
+        />
         <p
           class="danger"
           *ngIf="
@@ -75,7 +86,10 @@
             (form.get('formEmail')?.dirty || form.get('formEmail')?.touched)
           "
         >
-          {{ errorsMsg.msgRequired }}
+          {{
+            "contact-msg-required-empty"
+              | translate : { value: errorsMsg.msgRequired }
+          }}
         </p>
         <p
           class="danger"
@@ -84,13 +98,16 @@
             (form.get('formEmail')?.dirty || form.get('formEmail')?.touched)
           "
         >
-          {{ errorsMsg.msgEmail }}
+          {{
+            "contact-msg-required-email"
+              | translate : { value: errorsMsg.msgEmail }
+          }}
         </p>
         <textarea
           name="message"
           cols="20"
           rows="10"
-          placeholder="Your Message"
+          placeholder="{{ 'contact-placeholder-message' | translate }}"
           style="resize: none"
           formControlName="formMessage"
         ></textarea>
@@ -101,7 +118,10 @@
             (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
           "
         >
-          {{ errorsMsg.msgRequired }}
+          {{
+            "contact-msg-required-empty"
+              | translate : { value: errorsMsg.msgRequired }
+          }}
         </p>
         <p
           class="danger"
@@ -110,7 +130,10 @@
             (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
           "
         >
-          {{ errorsMsg.msgMinLength }}
+          {{
+            "contact-msg-required-min"
+              | translate : { value: errorsMsg.msgMinLength }
+          }}
         </p>
         <p
           class="danger"
@@ -119,7 +142,10 @@
             (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
           "
         >
-          {{ errorsMsg.msgMaxLength }}
+          {{
+            "contact-msg-required-max"
+              | translate : { value: errorsMsg.msgMaxLength }
+          }}
         </p>
 
         <button>

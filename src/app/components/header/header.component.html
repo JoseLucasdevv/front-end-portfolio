@@ -8,13 +8,17 @@
   <img src="../../../assets/Images/Logo.png" alt="Logo principal José Lucas" />
 
   <ul>
-    <li><a (click)="scroll('home')">Home</a></li>
-    <li><a (click)="scroll('about')">About</a></li>
     <li>
-      <a (click)="scroll('projets')">Projets</a>
+      <a (click)="scroll('home')">{{ "header-nav1" | translate }}</a>
     </li>
     <li>
-      <a (click)="scroll('contact')">Contact</a>
+      <a (click)="scroll('about')">{{ "header-nav2" | translate }}</a>
+    </li>
+    <li>
+      <a (click)="scroll('projets')">{{ "header-nav3" | translate }}</a>
+    </li>
+    <li>
+      <a (click)="scroll('contact')">{{ "header-nav4" | translate }}</a>
     </li>
     <li>
       <button class="btn-translate" (click)="switchLanguage('pt')">PT</button> |

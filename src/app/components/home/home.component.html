@@ -1,11 +1,9 @@
 <div class="container" id="home">
   <div class="text-container">
-    <h1>Hi,I'm José Lucas</h1>
-    <h3>Full-stack developer and Innovation enthusiast</h3>
+    <h1>{{ "home-title" | translate }}</h1>
+    <h3>{{ "home-h3" | translate }}</h3>
     <p>
-      Over 2 years of experience in the tech industry. I specialize in building
-      innovative web and mobile applications using technologies such as React,
-      Angular and Node.js
+      {{ "home-text" | translate }}
     </p>
     <div class="buttons">
       <button
@@ -16,8 +14,8 @@
           )
         "
       >
-        <img src="../../../assets/arrows/ReadCvLogo.svg" alt="Img CV logo" /> My
-        resume
+        <img src="../../../assets/arrows/ReadCvLogo.svg" alt="Img CV logo" />
+        {{ "home-btn-resume" | translate }}
       </button>
       <button
         class="btn-secondary"
@@ -25,7 +23,7 @@
           goToUrl('https://api.whatsapp.com/send?l=pt&amp;phone=55086999512819')
         "
       >
-        Get in touch
+        {{ "home-btn-get" | translate }}
         <img
           src="../../../assets/arrows/ArrowRight.svg"
           alt="img ArrowRigth "

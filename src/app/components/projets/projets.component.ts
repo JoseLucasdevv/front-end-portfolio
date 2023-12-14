@@ -31,9 +31,8 @@ export class ProjetsComponent implements OnInit {
     this._filteredRepos.filteredData(this.repositories);
 
     this.filteredResult = this._filteredRepos.filteredResult;
-
-    // this.languagesFiltered = this._filteredRepos.languages_url;
   }
+
   goToUrl(url: string) {
     window.open(`https://${url}${this.deployUrl}`, '_blank');
   }

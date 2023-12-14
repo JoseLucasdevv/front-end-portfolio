@@ -9,7 +9,7 @@
   "home-btn-resume": "Meu Currículo",
   "home-btn-get": "Entre em Contato",
   "about-title": "Sobre mim",
-  "about-h1": "Sou um desenvolvedor de software apaixonado e estou em busca de minha primeira oportunidade",
+  "about-h1": "Sou um desenvolvedor de software apaixonado e estou em busca da minha primeira oportunidade",
   "about-text": "Além da programação, sou um entusiasta do café, um amante de gatos e um esportista que gosta de passar o tempo livre praticando exercicios. Atualmente, estou buscando oportunidades para trazer minhas habilidades e entusiasmo para uma empresa de tecnologia no Brasil, Estados Unidos ou na Europa e estou entusiasmado com a perspectiva de me mudar para enfrentar novos desafios.",
   "about-btn-resume": "Meu Currículo",
   "projects-title": "Projetos",
@@ -26,5 +26,8 @@
   "contact-msg-required-email": " O Input não corresponde o tipo Email",
   "contact-msg-required-min": " O mínimo de caracteres é 6 ",
   "contact-msg-required-max": "O máximo de caracteres é 200 ",
-  "footer-text": "José Lucas 2023. Layout baseado no template da rocketseat's."
+  "contact-btn": "Envie sua mensagem",
+  "footer-text": "José Lucas 2023. Layout baseado no template da rocketseat's.",
+  "alert-sucess": "Formulário enviado",
+  "alert-error": "Preencha o Formulário"
 }

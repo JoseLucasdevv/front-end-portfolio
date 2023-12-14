@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { FormService } from 'src/app/services/form.service';
 import { Errors } from 'src/app/types/Errors-interface';
 import { ContactForm } from 'src/app/types/form-interface';
@@ -22,7 +23,8 @@ export class FormComponent implements OnInit {
 
   constructor(
     private _formService: FormService,
-    private _formBuilder: FormBuilder
+    private _formBuilder: FormBuilder,
+    private _translate: TranslateService
   ) {}
 
   ngOnInit(): void {
@@ -42,13 +44,21 @@ export class FormComponent implements OnInit {
 
   onSubmit(): void | boolean {
     if (this.form.status === 'INVALID') {
-      alert('preencha o formulário');
+      let msgError;
+      this._translate.get('alert-error').subscribe((data) => {
+        msgError = data;
+      });
+      alert(msgError);
       return false;
     }
 
     this._formService.send(this.form.value);
+    let msgSucess;
+    this._translate.get('alert-sucess').subscribe((data) => {
+      msgSucess = data;
+    });
 
-    alert('send e-mail success');
+    alert(msgSucess);
 
     this.form.reset();
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Navigate } from '../../navigate';
 import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

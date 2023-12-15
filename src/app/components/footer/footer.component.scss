@@ -64,3 +64,9 @@ button {
     justify-content: center;
   }
 }
+
+@media (max-width: 380px) {
+  ul {
+    gap: 1.3rem;
+  }
+}

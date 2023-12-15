@@ -22,11 +22,11 @@
   "contact-text-first": "I'm always up for a chat. Pop me an email at",
   "contact-text-last": "or giveme a shout on social media.",
   "contact-msg-required-empty": " The field cannot be empty ",
-  "contact-msg-required-email": " Enter a Valid Email ",
+  "contact-msg-required-email": " Enter a valid email ",
   "contact-msg-required-min": " The minimum number of characters is 6 ",
   "contact-btn": "Send me a message",
   "contact-msg-required-max": "Maximum characters is 200 ",
   "footer-text": "José Lucas 2023. Layout based on rocketseat's template.",
-  "alert-sucess": "send email sucess",
-  "alert-error": "fill the form"
+  "alert-sucess": "Send email success",
+  "alert-error": "Fill the form"
 }

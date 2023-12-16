@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,6 +9,8 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   title = 'portfolio-project';
   ngOnInit() {
+    AOS.init();
+
     if (environment.production) {
       console.log('We are running in production mode');
       console.log(`API Key: ${environment.apiKey}`);

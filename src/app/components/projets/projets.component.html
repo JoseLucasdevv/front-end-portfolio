@@ -1,4 +1,4 @@
-<div class="container" id="projets">
+<div data-aos="fade-up" data-aos-duration="1000" class="container" id="projets">
   <div class="container-wrapper">
     <div class="container-text">
       <span>{{ "projects-title" | translate }}</span>
@@ -6,7 +6,12 @@
     </div>
 
     <div class="container-card">
-      <div class="cards" *ngFor="let card of filteredResult">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="cards"
+        *ngFor="let card of filteredResult"
+      >
         <div class="adjust">
           <div class="container-data">
             <div class="img-project">

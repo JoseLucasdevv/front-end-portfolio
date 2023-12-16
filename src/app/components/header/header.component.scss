@@ -34,7 +34,13 @@ a:hover {
   font-size: 2.2rem;
   color: $color-green;
 }
-
+#img-logo {
+  width: 20rem;
+  height: 6rem;
+  background-image: url("../../../assets/Images/Logo.png");
+  background-size: cover;
+  background-position: center;
+}
 .img-hamburguer {
   display: none;
   height: 4.2rem;

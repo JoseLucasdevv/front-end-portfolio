@@ -3,7 +3,7 @@
 .container-aside {
   background-color: $color-gray-Fill-container;
   width: 25rem;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -80,5 +80,29 @@ a:hover {
   }
   ul {
     gap: 3.5rem;
+  }
+}
+@media (max-height: 430px) {
+  .section-header {
+    gap: 1rem;
+    height: 12rem;
+    .picture-insta {
+      margin-top: 0.5rem;
+      img {
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+  ul {
+    margin-top: 8%;
+    gap: 1rem;
+    li {
+      font-size: 1.7rem;
+    }
+  }
+  .btn-translate {
+    font-size: 1.5rem;
   }
 }

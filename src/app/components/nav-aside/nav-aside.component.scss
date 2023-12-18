@@ -6,6 +6,7 @@
   height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .section-header {
@@ -85,10 +86,11 @@ a:hover {
 @media (max-height: 430px) {
   .section-header {
     gap: 1rem;
-    height: 12rem;
+    height: 15rem;
     .picture-insta {
       margin-top: 0.5rem;
       img {
+        margin-top: 1rem;
         border-radius: 50%;
         width: 6rem;
         height: 6rem;
@@ -96,8 +98,8 @@ a:hover {
     }
   }
   ul {
-    margin-top: 8%;
-    gap: 1rem;
+    margin-top: 10%;
+
     li {
       font-size: 1.7rem;
     }

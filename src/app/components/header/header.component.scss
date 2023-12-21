@@ -11,9 +11,6 @@ header {
   padding: 0rem 10rem;
   // background-color: $color-gray-Fill-container;
 
-  img {
-    height: 20rem;
-  }
   ul {
     display: flex;
     align-items: center;
@@ -75,5 +72,15 @@ a:hover {
     .img-hamburguer {
       display: block;
     }
+  }
+}
+
+@media (max-width: 350px) {
+  #img-logo {
+    width: 17rem;
+  }
+  .img-hamburguer {
+    height: 3.2rem;
+    width: 3.2rem;
   }
 }

@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .arrowUp-button:hover {
@@ -11,10 +12,10 @@
 }
 
 footer {
-  padding: 3rem 4rem;
+  padding: 4rem 4rem;
   width: 100vw;
   background-color: $color-gray-Fill-container;
-  margin-top: 12rem;
+  margin-top: 15rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,6 +43,7 @@ ul {
       color: $color-green;
     }
   }
+  flex-wrap: wrap;
 }
 
 button {
@@ -65,9 +67,26 @@ button {
     justify-content: center;
   }
 }
+@media (max-width: 480px) {
+  footer {
+    padding: 4rem 0rem;
+  }
+  ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .text-container {
+    text-align: center;
+  }
+}
 
 @media (max-width: 380px) {
   ul {
     gap: 1.3rem;
+  }
+}
+@media (max-width: 350px) {
+  ul {
+    gap: 1rem;
   }
 }

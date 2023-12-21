@@ -49,3 +49,9 @@
     transform: translateY(0%) scale(1.1);
   }
 }
+
+@media (max-width: 600px) {
+  .whatsapp-icon {
+    right: 4%;
+  }
+}

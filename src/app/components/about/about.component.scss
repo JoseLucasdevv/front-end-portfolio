@@ -100,3 +100,14 @@ button {
     }
   }
 }
+
+@media (max-width: 350px) {
+  .img-container {
+    img {
+      height: 20rem;
+    }
+  }
+  .icons {
+    gap: 2rem;
+  }
+}

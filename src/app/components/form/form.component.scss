@@ -153,3 +153,17 @@ a {
     width: 95%;
   }
 }
+@media (max-width: 350px) {
+  .container-img {
+    position: relative;
+    width: 226px;
+    #iconForm {
+      position: absolute;
+      right: 5.82rem;
+      bottom: 0.75rem;
+    }
+    #bgForm {
+      z-index: 1000000;
+    }
+  }
+}

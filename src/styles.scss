@@ -26,7 +26,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  height: 100dvh;
 }
 
 a {
@@ -35,7 +34,7 @@ a {
 
 body {
   background-color: $color-black-body;
-
+  height: 100dvh;
   width: 100%;
 }
 

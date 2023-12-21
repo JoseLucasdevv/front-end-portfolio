@@ -1,5 +1,11 @@
 <div class="container">
-  <app-header></app-header>
+  <app-header (flagNav)="clickOpen($event)"></app-header>
+
+  <app-nav-aside
+    [flag]="showNav"
+    *ngIf="showNav | async"
+    class="nav-position"
+  ></app-nav-aside>
 
   <main>
     <app-home></app-home>

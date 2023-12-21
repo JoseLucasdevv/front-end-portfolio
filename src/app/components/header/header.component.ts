@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 import { Navigate } from '../../navigate';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  showNav: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  @Output() flagNav: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(
     private _navigate: Navigate,
@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
   scroll(el: string) {
     this._navigate.scroll(el);
   }
-  clickOpen() {
-    this.showNav.next(true);
+  clickOpen(value: boolean) {
+    this.flagNav.emit(value);
   }
 
   switchLanguage(language: string) {

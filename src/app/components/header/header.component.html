@@ -1,9 +1,3 @@
-<app-nav-aside
-  *ngIf="showNav | async"
-  class="nav-position"
-  [flag]="showNav"
-></app-nav-aside>
-
 <header data-aos="fade-down" data-aos-duration="1000">
   <a href="#">
     <div id="img-logo"></div>
@@ -28,5 +22,5 @@
     </li>
   </ul>
 
-  <div (click)="clickOpen()" class="img-hamburguer"></div>
+  <div (click)="clickOpen(true)" class="img-hamburguer"></div>
 </header>

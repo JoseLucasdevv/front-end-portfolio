@@ -11,7 +11,7 @@ export class Navigate {
       document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
     } else {
       this._router
-        .navigate(['/home'])
+        .navigate(['/'])
         .then(() =>
           document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' })
         );

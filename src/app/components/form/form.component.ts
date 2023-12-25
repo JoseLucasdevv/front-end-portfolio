@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { FormService } from 'src/app/services/form.service';
-import { Errors } from 'src/app/types/Errors-interface';
+import { Errors } from 'src/app/types/errors-interface';
 import { ContactForm } from 'src/app/types/form-interface';
 
 @Component({

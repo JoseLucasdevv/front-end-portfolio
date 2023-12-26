@@ -148,10 +148,21 @@
           }}
         </p>
 
-        <button>
+        <button *ngIf="flagBtn">
           {{ "contact-btn" | translate }}
           <img src="../../../assets/arrows/ArrowRight.svg" />
         </button>
+
+        <button *ngIf="!flagBtn" class="btn-spinner">
+          <div class="spinner"></div>
+        </button>
+        <p class="msgSucess" *ngIf="msgSucess">
+          {{ msgSucess }}
+          <img
+            src="../../../assets/Images/verificate.png"
+            alt="icon verificate"
+          />
+        </p>
       </form>
     </div>
   </div>

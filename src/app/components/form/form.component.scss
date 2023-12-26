@@ -101,6 +101,12 @@
       width: 22rem;
       margin-bottom: 4rem;
     }
+    .btn-spinner {
+      // padding: 1.7rem 2.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 span {
@@ -121,6 +127,13 @@ a {
   color: $color-green;
 }
 
+.spinner {
+  background-image: url("../../../assets/Images/tube-spinner.svg");
+  background-position: center;
+  background-size: cover;
+  width: 4rem;
+  height: 3rem;
+}
 .danger {
   margin-left: 0.7rem;
   font-size: 1.6rem;
@@ -131,6 +144,16 @@ a {
 }
 .remove {
   display: none;
+}
+.msgSucess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  font-size: 1.6rem;
+  color: $color-green;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 1300px) {
@@ -153,6 +176,7 @@ a {
     width: 95%;
   }
 }
+
 @media (max-width: 350px) {
   .container-img {
     position: relative;
@@ -165,5 +189,8 @@ a {
     #bgForm {
       z-index: 1000000;
     }
+  }
+  .msgSucess {
+    font-size: 1.4rem;
   }
 }

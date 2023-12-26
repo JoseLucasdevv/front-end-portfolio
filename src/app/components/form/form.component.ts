@@ -11,6 +11,9 @@ import { ContactForm } from 'src/app/types/form-interface';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  msgSucess!: string | boolean;
+  flagBtn: boolean = true;
+
   form!: FormGroup;
   errorsMsg: Errors = {
     msgEmail: 'Enter a Valid Email',
@@ -53,16 +56,18 @@ export class FormComponent implements OnInit {
     }
 
     this._formService.send(this.form.value);
+    this.flagBtn = false;
     this._formService.responseServerSide.subscribe((data) => {
-      console.log(data);
-    });
+      this.flagBtn = true;
 
-    let msgSucess;
-    this._translate.get('alert-sucess').subscribe((data) => {
-      msgSucess = data;
-    });
+      setTimeout(() => {
+        this.msgSucess = false;
+      }, 3000);
 
-    alert(msgSucess);
+      this._translate.get('alert-sucess').subscribe((data: string) => {
+        this.msgSucess = data;
+      });
+    });
 
     this.form.reset();
   }

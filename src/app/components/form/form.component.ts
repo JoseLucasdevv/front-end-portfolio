@@ -53,6 +53,10 @@ export class FormComponent implements OnInit {
     }
 
     this._formService.send(this.form.value);
+    this._formService.responseServerSide.subscribe((data) => {
+      console.log(data);
+    });
+
     let msgSucess;
     this._translate.get('alert-sucess').subscribe((data) => {
       msgSucess = data;

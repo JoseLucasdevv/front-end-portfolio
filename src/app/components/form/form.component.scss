@@ -1,6 +1,6 @@
 @import "../../../variables.scss";
 .container {
-  margin-top: 8rem;
+  margin-top: 12rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -31,6 +31,7 @@
 }
 
 .wrapper {
+  margin-top: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -16,6 +16,7 @@
           <div class="container-data">
             <div class="img-project">
               <img
+                class="img-wallpaper"
                 src="../../../assets/background-img/{{ card.name }}.png"
                 alt="picture {{ card.name }}"
                 (click)="goToUrl(card.name)"
@@ -32,9 +33,20 @@
             <p>{{ card.description }}</p>
           </div>
         </div>
+        <a
+          class="container-icon-github"
+          target="_blank"
+          href="{{ card.html_url }}"
+        >
+          <img
+            class="img-github"
+            src="../../../assets/social-media-icons/logo-github-black.svg"
+            alt="logo-github"
+          />
+        </a>
       </div>
     </div>
+    <div class="img-graphic"></div>
+    <div class="img-stellar"></div>
   </div>
-  <div class="img-graphic"></div>
-  <div class="img-stellar"></div>
 </div>

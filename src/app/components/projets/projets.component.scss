@@ -6,16 +6,16 @@
   display: flex;
 
   justify-content: center;
-  position: relative;
 }
 
 .container-wrapper {
+  position: relative;
   width: 85%;
-  height: 60rem;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 10rem;
 }
 .container-text {
   width: 100%;
@@ -39,8 +39,8 @@
   border-radius: 1rem;
   background-color: $color-gray-Fill-container;
   width: 40rem;
-  height: 35rem;
-  padding: 2rem 2rem;
+
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,8 +55,8 @@
 
 .img-graphic {
   position: absolute;
-  top: 8%;
-  left: 12%;
+  top: 82px;
+  left: 0%;
   background-image: url("../../../assets/graph/Graphic.svg");
   background-size: cover;
   width: 8rem;
@@ -67,12 +67,28 @@
   position: absolute;
   background-image: url("../../../assets/graph/stellar.svg");
   background-size: 8.2rem;
-  width: 10rem;
+  width: 7rem;
   height: 10rem;
-  bottom: 8%;
-  right: 12%;
+  bottom: -19%;
+  right: 0%;
+}
+.container-icon-github {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  .img-github {
+    border-radius: 0.5rem;
+    transition: 500ms ease;
+    width: 3rem;
+  }
 }
 
+.img-wallpaper {
+  transition: 500ms ease;
+}
+.img-wallpaper:hover {
+  transform: scale(1.1);
+}
 .img-project {
   background: linear-gradient(to right, $color-purple, $color-green);
   border-radius: 1rem 1rem 0rem 0rem;
@@ -91,7 +107,7 @@
     background-size: contain;
     border-radius: 1rem;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-    width: 70%;
+    width: 80%;
   }
 }
 .container-created {
@@ -135,11 +151,12 @@ h3 {
 }
 p {
   line-height: 2.4rem;
-  overflow: hidden;
+
   text-overflow: ellipsis;
   color: $color-secondary-text;
   font-weight: 400;
   font-size: 1.4rem;
+  width: 90%;
 }
 button {
   display: flex;
@@ -155,30 +172,19 @@ button {
   font-weight: 500;
   background-color: $color-purple;
 }
-@media (max-width: 1505px) {
-  .container {
-    height: 90rem;
-  }
-}
-@media (max-width: 1280px) {
-  .img-graphic {
-    left: 7%;
-  }
-}
-@media (max-width: 1170px) {
-  .img-graphic {
-    left: 4%;
-  }
-}
-@media (max-width: 988px) {
-  .container {
-    height: 130rem;
+
+@media (max-width: 1500px) {
+  .img-stellar {
+    bottom: -7%;
   }
 }
 
-@media (max-width: 740px) {
-  .img-stellar {
-    bottom: 0;
-    right: 0;
+@media (max-width: 460px) {
+  .img-graphic {
+    top: 122px;
   }
+  // .img-stellar {
+  //   bottom: -32px;
+  //   right: -9%;
+  // }
 }

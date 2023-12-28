@@ -1,27 +1,36 @@
-# PortfolioProject
+<h1 align="center">José Lucas | Portfólio</h1>
+<p align="center">
+  <img src="https://github.com/JoseLucasdevv/portfolio-project/assets/103385583/137bb908-23aa-448a-a920-f48b5784db88" alt="Captura de Tela do Portfólio">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Apresentação
 
-## Code scaffolding
+Olá, eu sou José Lucas, um desenvolvedor apaixonado por tecnologia e inovação. Este é o meu portfólio, onde compartilho meu trabalho e habilidades.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Sobre Mim
 
-## Build
+Sou um entusiasta da tecnologia, sempre em busca de aprimoramento e aprendizado contínuo. Meu foco principal está em criar soluções eficientes e inovadoras utilizando Angular e Node.js.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tecnologias
 
-## Running unit tests
+- Frontend: Angular
+- Backend: Node.js
+- HTML/CSS
+- Banco de dados (SQL/NoSQL)
+- Outras tecnologias relevantes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como Rodar o Projeto
 
-## Running end-to-end tests
+Para rodar este projeto localmente, siga os passos abaixo:
+1. Ceritique-se que você tenha a CLI do angular globalmente na sua máquina caso não tenha utilize `npm install -g @angular/cli`
+2. Clone este repositório.
+3. Instale as dependências utilizando o comando `npm install`.
+4. Execute o projeto com `npm start`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contato
 
-## Further help
+Se você deseja entrar em contato comigo ou saber mais sobre os projetos, fique à vontade para enviar um email para joselucas.dev@gmail.com ou me encontrar no [LinkedIn](https://www.linkedin.com/in/joselucasdev/).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---

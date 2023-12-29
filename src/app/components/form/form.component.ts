@@ -11,6 +11,7 @@ import { ContactForm } from 'src/app/types/form-interface';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  html: HTMLElement = document.getElementsByTagName('html')[0];
   msgSucess!: string | boolean;
   flagBtn: boolean = true;
 
@@ -51,11 +52,18 @@ export class FormComponent implements OnInit {
       this._translate.get('alert-error').subscribe((data) => {
         msgError = data;
       });
-      alert(msgError);
+
+      const overlay: HTMLElement | null = document.querySelector('.overlay');
+      if (!overlay) return false;
+      overlay.style.display = 'block';
+
+      this.html.style.overflowY = 'hidden';
+
       return false;
     }
 
     this._formService.send(this.form.value);
+
     this.flagBtn = false;
     this._formService.responseServerSide.subscribe((data) => {
       this.flagBtn = true;

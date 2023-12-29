@@ -21,6 +21,7 @@ import { ScrollChangeY } from './directives/scroll-y-change.directive';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HeaderBorderDirective } from './directives/header-border.directive';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HeaderBorderDirective } from './directives/header-border.directive';
     NavAsideComponent,
     ScrollChangeY,
     HeaderBorderDirective,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,5 +28,5 @@
   "contact-msg-required-max": "Maximum characters is 200 ",
   "footer-text": "José Lucas 2024. Layout based on rocketseat's template.",
   "alert-sucess": "Send email success",
-  "alert-error": "Fill the form"
+  "alert-error": "Please check if you filled out the contact form correctly and try again."
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { BehaviorSubject } from 'rxjs';
 import { FormService } from 'src/app/services/form.service';
 import { Errors } from 'src/app/types/errors-interface';
 import { ContactForm } from 'src/app/types/form-interface';
@@ -11,6 +12,7 @@ import { ContactForm } from 'src/app/types/form-interface';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  @Input() showModal!: BehaviorSubject<boolean>;
   html: HTMLElement = document.getElementsByTagName('html')[0];
   msgSucess!: string | boolean;
   flagBtn: boolean = true;
@@ -47,15 +49,8 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(): void | boolean {
-    if (this.form.status === 'INVALID') {
-      let msgError;
-      this._translate.get('alert-error').subscribe((data) => {
-        msgError = data;
-      });
-
-      const overlay: HTMLElement | null = document.querySelector('.overlay');
-      if (!overlay) return false;
-      overlay.style.display = 'block';
+    if (this.form.invalid) {
+      this.showModal.next(true);
 
       this.html.style.overflowY = 'hidden';
 
@@ -66,15 +61,15 @@ export class FormComponent implements OnInit {
 
     this.flagBtn = false;
     this._formService.responseServerSide.subscribe((data) => {
+      console.log(data);
       this.flagBtn = true;
-
-      setTimeout(() => {
-        this.msgSucess = false;
-      }, 3000);
 
       this._translate.get('alert-sucess').subscribe((data: string) => {
         this.msgSucess = data;
       });
+      setTimeout(() => {
+        this.msgSucess = '';
+      }, 3000);
     });
 
     this.form.reset();

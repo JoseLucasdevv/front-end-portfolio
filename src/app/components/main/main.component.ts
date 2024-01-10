@@ -7,12 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
-  showModal: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   showNav: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-
-  changeModal(flag: boolean) {
-    this.showModal.next(flag);
-  }
   clickOpen(event: boolean) {
     this.showNav.next(event);
   }

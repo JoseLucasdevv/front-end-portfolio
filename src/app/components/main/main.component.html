@@ -1,10 +1,6 @@
 <div class="container">
-  <div *ngIf="showModal | async" class="overlay" id="overlay">
-    <app-modal
-      data-aos="zoom-in"
-      data-aos-duration="1000"
-      (showModal)="changeModal($event)"
-    ></app-modal>
+  <div class="overlay" id="overlay">
+    <app-modal></app-modal>
   </div>
   <app-header (flagNav)="clickOpen($event)"></app-header>
 
@@ -19,7 +15,7 @@
 
     <app-about></app-about>
     <app-projets></app-projets>
-    <app-form [showModal]="showModal"></app-form>
+    <app-form></app-form>
   </main>
 
   <app-footer></app-footer>

@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="overlay" id="overlay">
-    <app-modal></app-modal>
+  <div *ngIf="showModal | async" class="overlay" id="overlay">
+    <app-modal (showModal)="showModalEvent($event)"></app-modal>
   </div>
   <app-header (flagNav)="clickOpen($event)"></app-header>
 
@@ -15,7 +15,7 @@
 
     <app-about></app-about>
     <app-projets></app-projets>
-    <app-form></app-form>
+    <app-form [flagModal]="showModal"></app-form>
   </main>
 
   <app-footer></app-footer>

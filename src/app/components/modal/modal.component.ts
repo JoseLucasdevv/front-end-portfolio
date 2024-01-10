@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -7,12 +7,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class ModalComponent {
   html: HTMLElement = document.getElementsByTagName('html')[0];
+  @Output() showModal = new EventEmitter<boolean>();
 
-  closeModal() {
-    const overlay: HTMLElement | null = document.querySelector('.overlay');
-    if (!overlay) return;
-
-    overlay.style.display = 'none';
+  closeModal(event: boolean) {
+    this.showModal.emit(event);
     this.html.style.overflowY = 'visible';
   }
 }

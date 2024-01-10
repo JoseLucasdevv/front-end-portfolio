@@ -11,6 +11,6 @@ export class ModalComponent {
 
   closeModal(event: boolean) {
     this.showModal.emit(event);
-    this.html.style.overflowY = 'visible';
+    this.html.style.overflowY ='visible';
   }
 }

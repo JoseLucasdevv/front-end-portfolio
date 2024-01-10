@@ -1,9 +1,16 @@
+<link rel="preload" href="../../../assets/Images/modal.png" as="image" />
+<link rel="preload" href="../../../assets/Images/cancel.png" as="image" />
+
 <div class="container">
   <button (click)="closeModal()" class="close-btn">
-    <img src="../../../assets/Images/cancel.png" />
+    <img
+      [src]="loadedImages[1]"
+      alt="img icon for close modal"
+      loading="lazy"
+    />
   </button>
   <div class="container-img">
-    <img src="../../../assets/Images/modal.png" alt="img icon form" />
+    <img [src]="loadedImages[0]" alt="img icon form" loading="lazy" />
   </div>
   <div class="container-text">
     <h1>{{ "alert-error" | translate }}</h1>

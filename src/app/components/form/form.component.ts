@@ -67,13 +67,12 @@ export class FormComponent implements OnInit {
     this._formService.responseServerSide.subscribe((data) => {
       this.flagBtn = true;
 
-      setTimeout(() => {
-        this.msgSucess = false;
-      }, 3000);
-
       this._translate.get('alert-sucess').subscribe((data: string) => {
         this.msgSucess = data;
       });
+      setTimeout(() => {
+        this.msgSucess = false;
+      }, 3000);
     });
 
     this.form.reset();

@@ -42,18 +42,12 @@
   border-radius: 1rem;
   gap: 4rem;
 }
-.container-img {
-  position: relative;
-  width: 320px;
 
-  #iconForm {
-    position: absolute;
-    right: 15.3rem;
-    bottom: 0.8rem;
-  }
-  #bgForm {
-    z-index: 1000000;
-  }
+#iconForm {
+  width: 16rem;
+}
+#bgForm {
+  z-index: 1000000;
 }
 
 .container-form {
@@ -179,18 +173,6 @@ a {
 }
 
 @media (max-width: 350px) {
-  .container-img {
-    position: relative;
-    width: 226px;
-    #iconForm {
-      position: absolute;
-      right: 5.82rem;
-      bottom: 0.85rem;
-    }
-    #bgForm {
-      z-index: 1000000;
-    }
-  }
   .msgSucess {
     font-size: 1.4rem;
   }

@@ -10,13 +10,19 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() flagNav: EventEmitter<boolean> = new EventEmitter<boolean>();
+  cookie!: string;
 
   constructor(
     private _navigate: Navigate,
     private _translate: TranslateService
   ) {}
   ngOnInit(): void {
-    this._translate.setDefaultLang('en');
+    this.cookie = localStorage.getItem('lang') || '';
+    if (!this.cookie) {
+      this._translate.setDefaultLang('en');
+    } else {
+      this._translate.setDefaultLang(this.cookie);
+    }
   }
 
   scroll(el: string) {
@@ -28,5 +34,6 @@ export class HeaderComponent implements OnInit {
 
   switchLanguage(language: string) {
     this._translate.use(language);
+    localStorage.setItem('lang', language);
   }
 }

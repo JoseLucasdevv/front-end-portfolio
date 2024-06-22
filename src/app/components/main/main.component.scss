@@ -30,7 +30,6 @@
 }
 .nav-position {
   height: 100%;
-
   z-index: 2;
   position: fixed;
   right: 0;
@@ -43,9 +42,11 @@
 
 @keyframes fadeIn {
   from {
+    opacity: 0;
     width: 0;
   }
   to {
+    opacity: 1s;
     width: 250px;
   }
 }

@@ -17,7 +17,7 @@ export class FilteredReposService {
         if (
           data.name === 'Add-task-List' ||
           data.name === 'clone-form-netflix' ||
-          data.name === 'first-portfolio'
+          data.name === 'memoween'
         ) {
           this.filteredResult.push(data);
         }

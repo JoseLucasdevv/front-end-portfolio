@@ -15,7 +15,7 @@ export class FilteredReposService {
     data.subscribe((data) => {
       data.filter((data) => {
         if (
-          data.name === 'Add-task-List' ||
+          data.name === 'notes-world' ||
           data.name === 'clone-form-netflix' ||
           data.name === 'memoween'
         ) {

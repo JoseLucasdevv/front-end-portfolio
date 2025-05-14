@@ -15,7 +15,7 @@ export class FilteredReposService {
       this.filteredResult = data.filter((data) => {
         if (
           data.name === 'notes-world' ||
-          data.name === 'clone-form-netflix' ||
+          data.name === 'receiver-management-api' ||
           data.name === 'memoween'
         ) {
           this.filteredResult.push(data);

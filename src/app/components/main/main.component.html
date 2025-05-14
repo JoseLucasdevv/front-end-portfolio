@@ -1,32 +1,20 @@
-<div class="container">
-  <div *ngIf="showModal | async" class="overlay" id="overlay">
-    <app-modal
-      data-aos="zoom-in"
-      data-aos-duration="2000"
-      (showModal)="showModalEvent($event)"
-    ></app-modal>
-  </div>
-  <app-header (flagNav)="clickOpen($event)"></app-header>
-
-  <app-nav-aside
-    [flag]="showNav"
-    *ngIf="showNav | async"
-    class="nav-position"
-  ></app-nav-aside>
-
-  <main>
-    <app-home></app-home>
-
-    <app-about></app-about>
-    <app-projets></app-projets>
-    <app-form [flagModal]="showModal"></app-form>
-  </main>
-
-  <app-footer></app-footer>
-  <a
-    href="https://api.whatsapp.com/send?l=pt&amp;phone=55086999327254"
-    target="_blank"
-  >
-    <div appScrollY class="whatsapp-icon"></div>
-  </a>
+<app-header (flagNav)="clickOpen($event)"></app-header>
+<div *ngIf="showModal | async" class="overlay" id="overlay">
+  <app-modal data-aos="zoom-in" data-aos-duration="2000" (showModal)="showModalEvent($event)"></app-modal>
 </div>
+
+
+<app-nav-aside [flag]="showNav" *ngIf="showNav | async" class="nav-position"></app-nav-aside>
+
+<main class="">
+  <app-home></app-home>
+
+  <app-about></app-about>
+  <app-projets></app-projets>
+  <app-form [flagModal]="showModal"></app-form>
+</main>
+
+<app-footer></app-footer>
+<a href="https://api.whatsapp.com/send?l=pt&amp;phone=55086999327254" target="_blank">
+  <div appScrollY class="whatsapp-icon"></div>
+</a>

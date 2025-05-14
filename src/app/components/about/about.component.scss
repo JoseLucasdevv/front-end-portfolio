@@ -1,13 +1,15 @@
 @import "../../../variables.scss";
 
 .container {
-  // margin-top: 5rem;
   width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .wrapper {
+  margin-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +22,7 @@
 }
 .img-container {
   img {
-    height: 40rem;
+    height: 50rem;
   }
 }
 .icons {
@@ -65,7 +67,7 @@ button {
 }
 .container-arrow {
   // margin-top: 4rem;
-  margin-bottom: 3rem;
+  //margin-bottom: 3rem;
   width: 78%;
   display: flex;
   justify-content: flex-end;

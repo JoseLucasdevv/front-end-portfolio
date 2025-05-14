@@ -1,35 +1,20 @@
-<div data-aos="fade-up" data-aos-duration="1000" class="container-arrow">
-  <div class="arrow"></div>
-</div>
-<div data-aos="fade-up" data-aos-duration="1000" class="container" id="about">
-  <div class="wrapper">
+<div class="container" id="about">
+  <div data-aos="fade-up" data-aos-duration="1000" class="container-arrow">
+    <div class="arrow"></div>
+  </div>
+  <div data-aos="fade-up" data-aos-duration="1000" class="wrapper">
     <div class="img-container">
-      <img
-        src="../../../assets/Images/bro.png"
-        alt="
-      image of a girl programming"
-      />
+      <img src="../../../assets/Images/bro.png" alt="
+      image of a girl programming" />
     </div>
 
     <div class="text-container">
       <div class="icons">
-        <img
-          src="../../../assets/languages-icons/javascript.svg"
-          alt="icon javascript Language"
-        />
-        <img
-          src="../../../assets/languages-icons/nodejs.svg"
-          alt="icon nodejs Language"
-        /><img
-          src="../../../assets/languages-icons/python.svg"
-          alt="icon python Language"
-        /><img
-          src="../../../assets/languages-icons/react.svg"
-          alt="icon react lib "
-        /><img
-          src="../../../assets/languages-icons/tailwind.svg"
-          alt="icon tailwind preprocessor"
-        />
+        <img src="../../../assets/languages-icons/javascript.svg" alt="icon javascript Language" />
+        <img src="../../../assets/languages-icons/nodejs.svg" alt="icon nodejs Language" /><img
+          src="../../../assets/languages-icons/python.svg" alt="icon python Language" /><img
+          src="../../../assets/languages-icons/react.svg" alt="icon react lib " /><img
+          src="../../../assets/languages-icons/tailwind.svg" alt="icon tailwind preprocessor" />
       </div>
       <span>{{ "about-title" | translate }} </span>
       <h1>
@@ -39,13 +24,11 @@
         {{ "about-text" | translate }}
       </p>
       <div class="button-container">
-        <button
-          (click)="
+        <button (click)="
             goToUrl(
               'https://www.dropbox.com/scl/fi/19pf7tfdalzf1isgm4hgz/Curr-culo-Jos-Lucas.pdf?rlkey=gjogzx8jsebsrfek90ur05gbm&st=hni7ghf1&dl=0'
             )
-          "
-        >
+          ">
           <img src="../../../assets/arrows/ReadCvLogo.svg" alt="img CV logo" />
           {{ "about-btn-resume" | translate }}
         </button>

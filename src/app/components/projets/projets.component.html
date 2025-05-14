@@ -1,4 +1,4 @@
-<div data-aos="fade-up" data-aos-duration="1000" class="container" id="projets">
+<div class="container" id="projets">
   <div class="container-wrapper">
     <div class="container-text">
       <span>{{ "projects-title" | translate }}</span>
@@ -6,43 +6,23 @@
     </div>
 
     <div class="container-card">
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        class="cards"
-        *ngFor="let card of filteredResult"
-      >
+      <div data-aos="fade-up" data-aos-duration="1000" class="cards" *ngFor="let card of filteredResult">
         <div class="adjust">
           <div class="container-data">
             <div class="img-project">
-              <img
-                class="img-wallpaper"
-                src="../../../assets/background-img/{{ card.name }}.png"
-                alt="picture {{ card.name }}"
-                (click)="goToUrl(card.name)"
-              />
+              <img class="img-wallpaper" src="../../../assets/background-img/{{ card.name }}.png"
+                alt="picture {{ card.name }}" (click)="goToUrl(card.name)" />
             </div>
             <div class="container-created">
               <span>{{ card.created_at | date : "MMMM - yyyy" }}</span>
-              <img
-                src="../../../assets/languages-icons/javascript.svg"
-                alt="Img logo javascript"
-              />
+              <img src="../../../assets/languages-icons/javascript.svg" alt="Img logo javascript" />
             </div>
             <h3>{{ card.name }}</h3>
             <p>{{ card.description }}</p>
           </div>
         </div>
-        <a
-          class="container-icon-github"
-          target="_blank"
-          href="{{ card.html_url }}"
-        >
-          <img
-            class="img-github"
-            src="../../../assets/social-media-icons/logo-github-black.svg"
-            alt="logo-github"
-          />
+        <a class="container-icon-github" target="_blank" href="{{ card.html_url }}">
+          <img class="img-github" src="../../../assets/social-media-icons/logo-github-black.svg" alt="logo-github" />
         </a>
       </div>
     </div>

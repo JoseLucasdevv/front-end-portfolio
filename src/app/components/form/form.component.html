@@ -1,140 +1,88 @@
-<div data-aos="fade-up" data-aos-duration="1000" class="container" id="contact">
-  <div class="wrapper">
+<div class="container" id="contact">
+  <div data-aos="fade-up" data-aos-duration="1000" class="wrapper">
     <div class="container-contact">
-      <img
-        src="../../../assets/Images/iconForm.png"
-        alt="img circle white backGround"
-        id="iconForm"
-      />
+      <img src="../../../assets/Images/iconForm.png" alt="img circle white backGround" id="iconForm" />
       <span>{{ "contact-title" | translate }}</span>
       <h2>{{ "contact-h2" | translate }}</h2>
       <p>
         {{ "contact-text-first" | translate }}
-        <a href="mailto:joselucas.dev@gmail.com" target="_blank"
-          >joselucasdev&#64;gmail.com</a
-        >
+        <a href="mailto:joselucas.dev@gmail.com" target="_blank">joselucasdev&#64;gmail.com</a>
         {{ "contact-text-last" | translate }}
       </p>
 
       <div class="container-icons">
-        <img
-          (click)="goToUrl('https://github.com/JoseLucasdevv')"
-          src="../../../assets/social-media-icons/logo-github 1.svg"
-          alt="this img representate logo github"
-        />
-        <img
-          (click)="goToUrl('https://www.linkedin.com/in/joselucasdev/')"
-          src="../../../assets/social-media-icons/logo-linkedin 1.svg"
-          alt="this img representate logo linkedin"
-        />
-        <img
-          (click)="goToUrl('https://www.instagram.com/joselucasz_/')"
-          src="../../../assets/social-media-icons/logo-instagram 1.svg"
-          alt="this img representate logo instagram"
-        />
-        <img
-          appScrollChangeY
-          (click)="
+        <img (click)="goToUrl('https://github.com/JoseLucasdevv')"
+          src="../../../assets/social-media-icons/logo-github 1.svg" alt="this img representate logo github" />
+        <img (click)="goToUrl('https://www.linkedin.com/in/joselucasdev/')"
+          src="../../../assets/social-media-icons/logo-linkedin 1.svg" alt="this img representate logo linkedin" />
+        <img (click)="goToUrl('https://www.instagram.com/joselucasz_/')"
+          src="../../../assets/social-media-icons/logo-instagram 1.svg" alt="this img representate logo instagram" />
+        <img appScrollChangeY (click)="
             goToUrl(
               'https://api.whatsapp.com/send?l=pt&amp;phone=55086999327254'
             )
-          "
-          src="../../../assets/social-media-icons/whatsappForm.svg"
-          alt="this img representate logo whatsapp"
-        />
+          " src="../../../assets/social-media-icons/whatsappForm.svg" alt="this img representate logo whatsapp" />
       </div>
     </div>
 
     <div class="container-form">
       <form id="sendEmail" [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input
-          type="text"
-          placeholder="{{ 'contact-placeholder-name' | translate }}"
-          formControlName="formName"
-        />
-        <p
-          class="danger"
-          *ngIf="
+        <input type="text" placeholder="{{ 'contact-placeholder-name' | translate }}" formControlName="formName" />
+        <p class="danger" *ngIf="
             form.get('formName')?.hasError('required') &&
             (form.get('formName')?.dirty || form.get('formName')?.touched)
-          "
-        >
+          ">
           {{
-            "contact-msg-required-empty"
-              | translate : { value: errorsMsg.msgRequired }
+          "contact-msg-required-empty"
+          | translate : { value: errorsMsg.msgRequired }
           }}
         </p>
-        <input
-          type="text"
-          placeholder="{{ 'contact-placeholder-email' | translate }}"
-          formControlName="formEmail"
-        />
-        <p
-          class="danger"
-          *ngIf="
+        <input type="text" placeholder="{{ 'contact-placeholder-email' | translate }}" formControlName="formEmail" />
+        <p class="danger" *ngIf="
             form.get('formEmail')?.hasError('required') &&
             (form.get('formEmail')?.dirty || form.get('formEmail')?.touched)
-          "
-        >
+          ">
           {{
-            "contact-msg-required-empty"
-              | translate : { value: errorsMsg.msgRequired }
+          "contact-msg-required-empty"
+          | translate : { value: errorsMsg.msgRequired }
           }}
         </p>
-        <p
-          class="danger"
-          *ngIf="
+        <p class="danger" *ngIf="
             form.get('formEmail')?.hasError('email') &&
             (form.get('formEmail')?.dirty || form.get('formEmail')?.touched)
-          "
-        >
+          ">
           {{
-            "contact-msg-required-email"
-              | translate : { value: errorsMsg.msgEmail }
+          "contact-msg-required-email"
+          | translate : { value: errorsMsg.msgEmail }
           }}
         </p>
-        <textarea
-          name="message"
-          cols="20"
-          rows="10"
-          placeholder="{{ 'contact-placeholder-message' | translate }}"
-          style="resize: none"
-          formControlName="formMessage"
-        ></textarea>
-        <p
-          class="danger"
-          *ngIf="
+        <textarea name="message" cols="20" rows="10" placeholder="{{ 'contact-placeholder-message' | translate }}"
+          style="resize: none" formControlName="formMessage"></textarea>
+        <p class="danger" *ngIf="
             form.get('formMessage')?.hasError('required') &&
             (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
-          "
-        >
+          ">
           {{
-            "contact-msg-required-empty"
-              | translate : { value: errorsMsg.msgRequired }
+          "contact-msg-required-empty"
+          | translate : { value: errorsMsg.msgRequired }
           }}
         </p>
-        <p
-          class="danger"
-          *ngIf="
+        <p class="danger" *ngIf="
             form.get('formMessage')?.hasError('minlength') &&
             (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
-          "
-        >
+          ">
           {{
-            "contact-msg-required-min"
-              | translate : { value: errorsMsg.msgMinLength }
+          "contact-msg-required-min"
+          | translate : { value: errorsMsg.msgMinLength }
           }}
         </p>
-        <p
-          class="danger"
-          *ngIf="
+        <p class="danger" *ngIf="
             form.get('formMessage')?.hasError('maxlength') &&
             (form.get('formMessage')?.dirty || form.get('formMessage')?.touched)
-          "
-        >
+          ">
           {{
-            "contact-msg-required-max"
-              | translate : { value: errorsMsg.msgMaxLength }
+          "contact-msg-required-max"
+          | translate : { value: errorsMsg.msgMaxLength }
           }}
         </p>
 
@@ -148,10 +96,7 @@
         </button>
         <p class="msgSucess" *ngIf="msgSucess">
           {{ msgSucess }}
-          <img
-            src="../../../assets/Images/verificate.png"
-            alt="icon verificate"
-          />
+          <img src="../../../assets/Images/verificate.png" alt="icon verificate" />
         </p>
       </form>
     </div>
